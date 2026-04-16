@@ -122,7 +122,7 @@ export default {
           {id:10016, name:"Searching for Unseen Sights", desc:"Silence Suzuka"},
           {id:10017, name:"Touching Sleeves Is Good Luck! ♪", desc:"Matikanefukukitaru"},
           {id:10018, name:"In my way", desc:"Tosen Jordan"},
-          {id:10019, NAME:"Peachy Silhouette", desc:"Narita Top Road"}
+          {id:10019, name:"Peachy Silhouette", desc:"Narita Top Road"},
           {id:20001, name:"Breakaway Battleship", desc:"Gold Ship"},
           {id:20002, name:"Foolproof Plan", desc:"Seiun Sky"},
           {id:20003, name:"Split the Sky, White Lightning!", desc:"Tamamo Cross"},
