@@ -200,6 +200,10 @@ def run_health_checks(device_id):
 def validate_device_setup(device_id) -> bool:
     res = _run_adb(["-s", device_id, "shell", "wm", "size"], timeout=10)
     size_str = res.stdout.strip().split(":")[-1].strip()
+    
+    if not size_str:
+        return False
+        
     w, h = map(int, size_str.split("x"))
 
     dpi_res = _run_adb(["-s", device_id, "shell", "wm", "density"], timeout=10)
@@ -358,9 +362,7 @@ if __name__ == '__main__':
     uninstall_uiautomator(selected_device)
 
     if not validate_device_setup(selected_device):
-        log.info("Fix the issues above and restart.")
-        while True:
-            time.sleep(3600)
+        log.info("Device validation failed")
 
     if not run_health_checks(selected_device):
         print("Health checks failed")
